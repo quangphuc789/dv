@@ -1,9 +1,16 @@
 {
-    "name": "node-api",
-    "main": "server.js",
-    "dependencies": {
-        "express": "~4.0.0",
-        "mongoose": "~3.6.13",
-        "body-parser": "~1.0.1"
-    }
+  "name": "node-api",
+  "main": "server.js",
+  "dependencies": {
+    "express": "~4.0.0",
+    "mongoose": "~3.6.13",
+    "body-parser": "~1.0.1",
+    "mongodb": "~2.2.25"
+  },
+  "devDependencies": {
+    "nodemon": "~1.11.0"
+  },
+  "scripts": {
+    "dev": "nodemon server.js"
+  }
 }
