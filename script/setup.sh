@@ -3,3 +3,4 @@ sudo apt-get install nodejs
 sudo apt-get install npm
 sudo ln -s `which nodejs` /usr/bin/node
 sudo npm install
+sudo npm install -g forever
