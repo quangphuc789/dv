@@ -1,17 +1,21 @@
-# simpleExpressAPI
-
 Live URL: http://54.169.173.133:3000/
 
-APIs:
+### Stack:
 
-**Method: POST**
-Endpoint: /object
-URL: http://54.169.173.133:3000/object
-Body: JSON: {mykey : value1}
+Nodejs  
+Expressjs   
+Mongodb 
 
-**Method: GET**
-Endpoint: /object/mykey
-URL: http://54.169.173.133:3000/object/mykey
+### APIs:
 
-Optional Parameters: timestamp (int)
-URL: http://54.169.173.133:3000/object/mykey?timestamp=1490890834
+**Method: POST**    
+Endpoint: /object   
+URL: http://54.169.173.133:3000/object  
+Body: JSON: {mykey : value}
+
+**Method: GET**     
+Endpoint: /object/\<mykey>      
+URL: http://54.169.173.133:3000/object/\<mykey>
+
+*Optional Parameters*: timestamp (int)      
+URL: http://54.169.173.133:3000/object/\<mykey>?timestamp=1490890834
