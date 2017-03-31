@@ -12,14 +12,14 @@ module.exports = {
                                     .sort({timestamp: -1})
                                     // .limit(1)
                                     .toArray(function(err, results) {
-                res.send(extract(results));
+                res.status(200).send(extract(results));
             });  
         } else {
             db.collection('object').find({key: id})
                                     .sort({timestamp: -1})
                                     // .limit(1)
                                     .toArray(function(err, results) {
-                res.send(extract(results));
+                res.status(200).send(extract(results));
             });  
         }
     },
@@ -32,6 +32,14 @@ module.exports = {
             if (req.body.hasOwnProperty(key)) {
                 payload.key = key;
                 payload.value = req.body[key];
+                console.log('-'+payload.value+'-');
+
+                if (payload.key === '' || payload.value === '') {
+                    res.status(400).json({
+                        success: false, message: 'key and value must not be empty'
+                    });
+                    return;
+                }
                 payload.timestamp = Math.round(new Date().getTime()/1000);
                 break;
             }
@@ -41,9 +49,9 @@ module.exports = {
         db.collection('object').save(payload, function (err, result) {
             if (err) {
                 console.log(err);
-                res.send(false);
+                res.status(500).json({success: false});
             } else {
-                res.send(true);
+                res.status(200).json({success: true});
             }
         })
     }
