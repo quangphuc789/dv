@@ -5,8 +5,8 @@ Live URL: http://54.169.173.133:3000/
 Nodejs  
 Expressjs   
 Mongodb
-Mocha
-AWS
+Mocha 
+AWS 
 
 ### APIs:
 
