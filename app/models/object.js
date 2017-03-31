@@ -32,7 +32,6 @@ module.exports = {
             if (req.body.hasOwnProperty(key)) {
                 payload.key = key;
                 payload.value = req.body[key];
-                console.log('-'+payload.value+'-');
 
                 if (payload.key === '' || payload.value === '') {
                     res.status(400).json({
