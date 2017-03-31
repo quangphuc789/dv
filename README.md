@@ -6,7 +6,7 @@ Nodejs
 Expressjs   
 Mongodb   
 Mocha   
-AWS   
+AWS EC2   
 
 ### APIs:
 
